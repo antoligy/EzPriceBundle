@@ -94,4 +94,20 @@ class CurrencyService implements CurrencyServiceInterface
         return $this->currencyHandler
                     ->getCurrencyByCode($this->getUsersCurrencyCode());
     }
+
+    /**
+     * Set the users currency.
+     *
+     * @param string $currencyCode 3 character code to set the users currency to.
+     *
+     * @return bool whether the session variable was set or not.
+     */
+    public function setUsersCurrency($currencyCode)
+    {
+        return $this->session
+                    ->set(
+                        $this->currencySessionVariableName,
+                        $currencyCode
+                    );
+    }
 }

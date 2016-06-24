@@ -64,4 +64,23 @@ class CurrencyServiceTest extends TestCase
 
         $this->assertEquals('EUR', $currencyService->getUsersCurrencyCode());
     }
+
+    /**
+     * @covers CurrencyService::setUsersCurrency
+     * Tests that we can change the users currency.
+     */
+    public function testSetUsersCurrency()
+    {
+        $mockSession = new Session(new MockFileSessionStorage());
+
+        $sessionVariableName = 'TestCurrencyServiceCurrency';
+
+        $currencyService = new CurrencyService($mockSession, $this->currencyHandler, 'GBP', $sessionVariableName);
+
+        $currencyToSet = 'EUR';
+
+        $currencyService->setUsersCurrency($currencyToSet);
+
+        $this->assertEquals($currencyToSet, $currencyService->getUsersCurrencyCode());
+    }
 }

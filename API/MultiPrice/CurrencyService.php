@@ -30,4 +30,13 @@ interface CurrencyService
      *                         applied to prices for the current user.
      */
     public function getUsersCurrency();
+
+    /**
+     * Set the users currency.
+     *
+     * @param string $currencyCode 3 character code to set the users currency to.
+     *
+     * @return bool whether the session variable was set or not.
+     */
+    public function setUsersCurrency($currencyCode);
 }
