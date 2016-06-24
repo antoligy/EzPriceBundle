@@ -29,7 +29,7 @@ before_script:
 
 # execute phpunit as the script command
 script:
-  - phpunit -d memory_limit=-1 --colors -c phpunit.xml
+  - php -d date.timezone="Europe/London" -d memory_limit=-1 vendor/bin/phpunit -c phpunit.xml
 
 # disable mail notifications
 notification:
