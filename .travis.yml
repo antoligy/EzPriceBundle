@@ -27,7 +27,7 @@ before_script:
   # Setup github key to avoid api rate limit
   - ./composer_install_github_key.sh
   # Install packages using composer
-  - composer install --dev --prefer-dist
+  - composer install --no-progress --no-interaction --prefer-dist
 
 # execute phpunit as the script command
 script:
