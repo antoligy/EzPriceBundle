@@ -4,7 +4,7 @@
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
-         colors="false"
+         colors="auto"
         >
     <testsuites>
         <testsuite name="EzSystems\EzPriceBundle\Tests\eZ">
