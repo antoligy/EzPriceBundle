@@ -33,7 +33,7 @@ before_script:
 
 # execute phpunit as the script command
 script:
-  - phpunit -c phpunit.xml
+  - php vendor/bin/phpunit -c phpunit.xml
 
 # disable mail notifications
 notification:
