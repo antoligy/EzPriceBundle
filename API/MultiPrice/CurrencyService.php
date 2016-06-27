@@ -39,4 +39,11 @@ interface CurrencyService
      * @return bool whether the session variable was set or not.
      */
     public function setUsersCurrency($currencyCode);
+
+    /**
+     * Fetch all available currencies.
+     *
+     * @return Values\Currency[] Array of all the currency objects.
+     */
+    public function getAllCurrencies();
 }
