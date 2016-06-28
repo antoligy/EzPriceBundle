@@ -30,13 +30,13 @@ class MultiPriceExtensionTest extends Twig_Test_IntegrationTestCase
      */
     protected function getExtensions()
     {
-        return [
+        return array(
             new MultiPriceExtension(
                 $this->getContentVatServiceMock(),
                 new PriceValueWithVatDataCalculator(),
                 $this->getCurrencyService()
             ),
-        ];
+        );
     }
 
     private function getContentVatServiceMock()

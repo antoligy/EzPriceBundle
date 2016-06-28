@@ -25,12 +25,12 @@ class PriceExtensionTest extends Twig_Test_IntegrationTestCase
      */
     protected function getExtensions()
     {
-        return [
+        return array(
             new PriceExtension(
                 $this->getContentVatServiceMock(),
                 new PriceValueWithVatDataCalculator()
             ),
-        ];
+        );
     }
 
     private function getContentVatServiceMock()
