@@ -46,4 +46,15 @@ interface CurrencyService
      * @return Values\Currency[] Array of all the currency objects.
      */
     public function getAllCurrencies();
+
+    /**
+     * Fetch a currency by its code.
+     *
+     * @param string $currencyCode 3 character code to fetch a currency by.
+     *
+     * @throws CurrencyNotFoundException If the currency is not found.
+     *
+     * @return Values\Currency The currency object.
+     */
+    public function getCurrencyByCode($currencyCode);
 }
