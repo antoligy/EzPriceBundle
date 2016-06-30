@@ -12,7 +12,7 @@ namespace EzSystems\EzPriceBundle\Core\MultiPrice;
 
 use EzSystems\EzPriceBundle\API\MultiPrice\CurrencyService as CurrencyServiceInterface;
 use EzSystems\EzPriceBundle\API\MultiPrice\Values\Currency;
-use EzSystems\Core\Persistence\Legacy\MultiPrice\Currency\Gateway\CurrencyNotFoundException;
+use EzSystems\EzPriceBundle\Core\Persistence\Legacy\MultiPrice\Currency\Gateway\CurrencyNotFoundException;
 use EzSystems\EzPriceBundle\SPI\Persistence\MultiPrice\CurrencyHandler;
 use Symfony\Component\HttpFoundation\Session\Session;
 
