@@ -75,7 +75,7 @@ class CurrencyService implements CurrencyServiceInterface
      */
     public function getUsersCurrencyCode()
     {
-        if ($this->session->has($this->currencySessionVariableName)) {
+        if ($this->session->isStarted() && $this->session->has($this->currencySessionVariableName)) {
             // Fetch the users currency from their session
             return $this->session->get($this->currencySessionVariableName);
         } else {
