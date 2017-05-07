@@ -4,11 +4,20 @@
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
-         colors="false"
+         colors="auto"
         >
     <testsuites>
         <testsuite name="EzSystems\EzPriceBundle\Tests\eZ">
             <directory>Tests/eZ</directory>
+        </testsuite>
+        <testsuite name="EzSystems\EzPriceBundle\Tests\Core">
+            <directory>Tests/Core</directory>
+        </testsuite>
+        <testsuite name="EzSystems\EzPriceBundle\Tests\Persistence">
+            <directory>Tests/Persistence</directory>
+        </testsuite>
+        <testsuite name="EzSystems\EzPriceBundle\Tests\Twig">
+            <directory>Tests/Twig</directory>
         </testsuite>
     </testsuites>
     <filter>
